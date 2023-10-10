@@ -10,4 +10,25 @@ package org.example;
         Kata.arrayDiff(new int[] {1, 2, 2, 2, 3}, new int[] {2}) => new int[] {1, 3}*/
 public class ArrayDiff {
 
+    public static void main(String[] args) {
+
+        int[] arrayOfNumbers = new int[] {1, 2, 2, 4};
+        int numbersWhichShouldBeDeleted = 2;
+
+        int[] result = methodWhichDeletesNumbers(arrayOfNumbers, numbersWhichShouldBeDeleted);
+        for (int r : result) {
+            System.out.println(r);
+        }
+    }
+
+    public static int[] methodWhichDeletesNumbers (int[] initialArrayOfNumbers, int numberWhichShouldBeDeleted) {
+        int[] arrayWithoutNumbersWhichShouldBeDeleted = new int[initialArrayOfNumbers.length];
+        for (int i = 0; i < initialArrayOfNumbers.length; i++) {
+            if (initialArrayOfNumbers[i] == numberWhichShouldBeDeleted) {
+            } else
+                arrayWithoutNumbersWhichShouldBeDeleted[i] = initialArrayOfNumbers[i];
+        }
+        return arrayWithoutNumbersWhichShouldBeDeleted;
+    }
+
 }
